@@ -1,0 +1,30 @@
+<mat-drawer-container class="container" hasBackdrop="true" autosize>
+
+  <mat-drawer class="side-nav" #drawer mode="side">
+    <div style="text-align: center; padding: 2%;">
+      <button class="menu-button-width-full" color="primary" mat-stroked-button (click)="homePage(); drawer.toggle()"><mat-icon style="margin-right: 1%;">home</mat-icon>Home</button>
+    </div>
+    <div style="text-align: center; padding: 2%;">
+      <button class="menu-button-width-full" color="primary" mat-stroked-button (click)="schedulePage(); drawer.toggle()"><mat-icon style="margin-right: 1%;">assignment</mat-icon>Agenda</button>
+    </div>
+    <div style="text-align: center; padding: 2%;">
+      <button class="menu-button-width-full" color="primary" mat-stroked-button (click)="registerPage(); drawer.toggle()"><mat-icon style="margin-right: 1%;">add_box</mat-icon>Cadastros</button>
+    </div>
+
+    <div style="text-align: center; padding: 2%;">
+      <button class="menu-button-width-full" color="primary" mat-stroked-button (click)="configurationPage(); drawer.toggle()"><mat-icon style="margin-right: 1%;">settings</mat-icon>Configurações</button>
+    </div>    
+    
+  </mat-drawer>
+
+  <mat-drawer-content class="side-menu-content">
+
+  <mat-toolbar color="primary" class="example-toolbar">
+    <button mat-icon-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
+    <button class="button-right" mat-icon-button (click)="exit()"><mat-icon>logout</mat-icon></button>    
+  </mat-toolbar>
+
+  <router-outlet></router-outlet>
+  
+  </mat-drawer-content>
+</mat-drawer-container>
