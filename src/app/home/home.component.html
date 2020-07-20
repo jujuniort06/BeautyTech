@@ -1,1 +1,59 @@
 <p>home works!</p>
+
+<mat-form-field>
+  <mat-label>Tipo de Grafico</mat-label>
+  <mat-select [(ngModel)]="chartType">
+    <mat-option value="1">Linha</mat-option>
+    <mat-option value="2">Pizza</mat-option>
+    <mat-option value="3">Barra</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<ngx-charts-line-chart *ngIf="chartType == 1"
+  [view]="view"
+  [scheme]="colorScheme"
+  [legend]="legend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxis]="xAxis"
+  [yAxis]="yAxis"
+  [gradient]="gradient"
+  [xAxisLabel]="'Ano'"
+  [yAxisLabel]="'População'"
+  [timeline]="timeline"
+  [results]="multi"
+  (select)="onSelect($event)"
+  (activate)="onActivate($event)"
+  (deactivate)="onDeactivate($event)"
+  >
+</ngx-charts-line-chart>
+
+<ngx-charts-pie-chart *ngIf="chartType == 2"
+  [view]="viewPie"
+  [scheme]="colorScheme2"
+  [results]="single"
+  [gradient]="gradient"
+  [legend]="showLegend"
+  [legendPosition]="legendPosition"
+  [labels]="showLabels"
+  [doughnut]="isDoughnut"
+  (select)="onSelect($event)"
+  (activate)="onActivate($event)"
+  (deactivate)="onDeactivate($event)"
+  >
+</ngx-charts-pie-chart>
+
+<ngx-charts-bar-vertical *ngIf="chartType == 3"
+  [view]="viewBar"
+  [scheme]="colorScheme"
+  [results]="single"
+  [gradient]="gradient"
+  [xAxis]="showXAxis"
+  [yAxis]="showYAxis"
+  [legend]="showLegend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel"
+  (select)="onSelect($event)">
+</ngx-charts-bar-vertical>

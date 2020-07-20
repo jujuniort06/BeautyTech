@@ -21,6 +21,8 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { ConfigurationComponent } from './configuration/configuration.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { ConfigurationComponent } from './configuration/configuration.component'
     MatTabsModule,
     MatInputModule,
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
+    NgxChartsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
