@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  multi : any = [
+multi : any = [
     {
       "name": "Alemanha",
       "series": [
@@ -103,29 +103,28 @@ export class HomeComponent implements OnInit {
     }
   ];
 
-  view: any[] = [900, 500];
+  view   : any[] = [900, 500];
   viewPie: any[] = [900, 500];
   viewBar: any[] = [900, 500];
 
-  legend: boolean = true;
-  showLabels: boolean = true;
-  showLabels2: boolean = true;
-  animations: boolean = true;
-  xAxis: boolean = true;
-  yAxis: boolean = true;
+  legend        : boolean = true;
+  showLabels    : boolean = true;
+  showLabels2   : boolean = true;
+  animations    : boolean = true;
+  xAxis         : boolean = true;
+  yAxis         : boolean = true;
   showYAxisLabel: boolean = true;
   showXAxisLabel: boolean = true;
-  xAxisLabel: string = 'Year';
-  yAxisLabel: string = 'Population';
-  timeline: boolean = true;
-  showLegend: boolean = true;
-  gradient: boolean = true;
+  timeline      : boolean = true;
+  showLegend    : boolean = true;
+  gradient      : boolean = true;
+  isDoughnut    : boolean = false;
+  showXAxis     : boolean = true;
+  showYAxis     : boolean = true;
+
+  xAxisLabel    : string = 'Year';
+  yAxisLabel    : string = 'Population';
   legendPosition: string = 'below';
-  isDoughnut: boolean = false;
-
-  showXAxis = true;
-  showYAxis = true;
-
 
   chartType = '1';
 
